@@ -5,13 +5,11 @@ require_relative 'gamemanager'
 require_relative 'referee'
 
 # Methods
-def output_results(winner)
-  if winner
-    # This is reverse due to the current game logic
-    winning_player = game.state[:is_x_turn] ? 'o' : 'x'
 
-    puts "The game is over. #{winning_player} has won! Here is the result:\n"
-    BoardUI.print_board(game.state[:initial_board])
+# Determines what output to end the game with based on whether a winner exists
+def output_results(winner, winning_player)
+  if winner
+    puts "The game is over. #{winning_player} has won!"
   else
     puts 'Game over, no winner!!'
   end
@@ -39,4 +37,4 @@ while in_play && !winner
                                        game.state[:num_of_turns]) { |winner_exists| winner = winner_exists }
 end
 
-output_results(winner)
+output_results(winner, game.state[:is_x_turn] ? 'o' : 'x')

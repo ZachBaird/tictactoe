@@ -1,7 +1,8 @@
 # frozen_string_literal: true
 
 # *****************************************************************************
-# RefereeManager
+# RefereeManager - Determines whether the game should end based on if there's
+#   a winner or if turns have run out
 class RefereeManager
   def self.check_game?(array, num_of_turns)
     if num_of_turns == array.length
@@ -14,6 +15,9 @@ class RefereeManager
     end
   end
 
+  # Class method taking in board array and testing winning positions
+  #   Returns true if there's a winner
+  #   Returns false if there isn't a winner
   def self.test_for_winning_combo?(array)
     if (array[0] == array[1] && array[1] == array[2] && !array[0].nil?) ||
        (array[3] == array[4] && array[4] == array[5] && !array[3].nil?) ||
