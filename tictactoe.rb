@@ -24,7 +24,7 @@ game = GameManager.new
 
 # Print starting board
 puts 'Here is the starting board: '
-BoardUI.print_board(game.state[:initial_board])
+BoardUI.print_board(game.state.get_board)
 
 # Decide which player starts the game
 game.decide_turn
@@ -33,8 +33,8 @@ game.decide_turn
 while in_play && !winner
   game.play
   system('clear')
-  in_play = RefereeManager.check_game?(game.state[:initial_board],
-                                       game.state[:num_of_turns]) { |winner_exists| winner = winner_exists }
+  in_play = RefereeManager.check_game?(game.state.get_board,
+                                       game.state.get_turn) { |winner_exists| winner = winner_exists }
 end
 
-output_results(winner, game.state[:is_x_turn] ? 'o' : 'x')
+output_results(winner, game.state.get_turn ? 'o' : 'x')
