@@ -8,7 +8,7 @@ All you need is Ruby installed on your machine. I wrote this in Ruby 2.6.5.
 
 ## The Files
 
-There are 5 files inside the `dist` folder:
+There are 5 files inside the `lib` folder:
 
 * board.rb - static class for printing out the board
 * gamestate.rb - holds the GameState class, which contains the game's state and APIs to mutate the data
@@ -18,4 +18,4 @@ There are 5 files inside the `dist` folder:
 
 ## Playing
 
-To play the game, simply clone the repo, `cd` into `TicTacToe/dist`, and then run `ruby tictactoe.rb`.
+To play the game, simply clone the repo, `cd` into `TicTacToe/lib`, and then run `ruby tictactoe.rb`.
