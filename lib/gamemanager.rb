@@ -34,7 +34,6 @@ class GameManager
       @board_data[move.pos] = move.player if @board_data[move.pos].nil?
       @board.update_board @board_data
 
-
       if @referee.winner?
         puts 'We have a winner! Winner is ' << @referee.winner
         puts "Here is the board after victory:\n"

@@ -2,7 +2,6 @@
 
 require './lib/referee'
 require './lib/move'
-require 'pry'
 
 describe Referee do
   context 'returns true for correct winners' do

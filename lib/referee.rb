@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 require_relative 'move'
-require 'pry'
 
 # Stores played moves and determines a winner
 class Referee
@@ -55,6 +54,4 @@ class Referee
 
     result
   end
-
-  
 end
