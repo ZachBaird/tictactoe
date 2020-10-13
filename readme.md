@@ -1,11 +1,11 @@
-# Oreo Tictactoe
+# Tictactoe
 
-This repository is a simple Ruby tictactoe game.
+A simple Ruby tictactoe game.
 
 ## Getting Started
 
 1. Clone the repository
-2. `cd` into TicTacToe
+2. `cd` into `tictactoe`
 3. Run `bundle install`
 4. Run `rspec` to run the unit tests
 5. Run `ruby lib/main.rb` to play the game!
