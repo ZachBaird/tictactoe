@@ -64,7 +64,12 @@ class GameManager
     until valid_input
       choice = gets.chomp
 
-      if (0..8).to_a.include? choice.to_i
+      puts choice
+
+      position_free = (@board_data[choice.to_i]).nil?
+      valid_integer = (0..8).to_a.include? choice.to_i
+
+      if valid_integer && position_free
         valid_input = true
       else
         puts 'Invalid choice..'

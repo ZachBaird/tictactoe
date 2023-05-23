@@ -22,7 +22,7 @@ There are 5 files inside the `old/lib` folder which constituted the original app
 
 The current test-driven version also has 5 files:
 
-* board.rb - A class containing a strin literal of what the board looks like with methods to display and update that value
+* board.rb - A class containing a string literal of what the board looks like with methods to display and update that value
 * gamemanager.rb - A class managing the main game loop and consuming most the other code
 * main.rb - The entrypoint for the application
 * move.rb - A class serving as a plain old Ruby object to store player data on a move
