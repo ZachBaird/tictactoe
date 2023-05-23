@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require_relative 'referee'
 require_relative 'board'
 
@@ -23,11 +25,11 @@ class GameManager
 
       choice = get_input
 
-      if @x_turn
-        move = Move.new('x', choice)
-      else
-        move = Move.new('o', choice)
-      end
+      move = if @x_turn
+               Move.new('x', choice)
+             else
+               Move.new('o', choice)
+             end
 
       @referee.play move
 
